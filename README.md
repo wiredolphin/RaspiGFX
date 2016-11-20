@@ -37,7 +37,7 @@ g++ -std=c++11 RaspiGFX.cpp RGB565.cpp Framebuffer.cpp graphicTest.cpp -o rgfx
 <h5> > Load the <b>fbtft</b> kernel module</h5>
 <div>
 	Since version 3.15 the Linux Kernel comes with included <b>FBTFT</b> drivers. You need to load it the first time
-	after boot before to use this library. This is accomplished issueing the fallowing command:
+	after boot before to use this library. This is accomplished issuing the fallowing command:
 </div>
 <pre>sudo modprobe fbtft_device name=adafruit22a rotate=90</pre>
 <div>
@@ -50,7 +50,7 @@ g++ -std=c++11 RaspiGFX.cpp RGB565.cpp Framebuffer.cpp graphicTest.cpp -o rgfx
 	</ul>
 </div>
 <div>You can also make it load automatically when the Rpi boots.</div>
-<p>If required you can unload the module issueing:</p>
+<p>If required you can unload the module issuing:</p>
 <pre>sudo modprobe -r fbtft_device</pre>
 <br \>
 <h5> > Use the included test program</h5>
