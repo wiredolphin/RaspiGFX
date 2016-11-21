@@ -8,7 +8,7 @@ A graphic library for Raspberry Pi that allows to drive small TFT display module
 
 <h3>Prerequisite</h3>
 <ul>
-	<li>Enable SPI on the Raspberry is required. <a href="https://github.com/wiredolphin/RaspiGFX/wiki">Here</a> 
+	<li>Enable SPI on the Raspberry is required. <a href="https://github.com/wiredolphin/RaspiGFX/wiki/Enable-SPI-on-Raspberry-Pi">Here</a> 
 		a follow up on one method to do it.
 	</li>
 	<li>You must load the <b>fbtft</b> kernel module before to use this library. This module allows
@@ -35,10 +35,10 @@ g++ -std=c++11 RaspiGFX.cpp RGB565.cpp Framebuffer.cpp graphicTest.cpp -o rgfx
 <p>Anyway it is suggested to examine the example program source to get an idea on how to use the <code>RaspiGFX</code> class.</b>
 <br \>
 <h5> > Load the <b>fbtft</b> kernel module</h5>
-<div>
+<p>
 	Since version 3.15 the Linux Kernel comes with included <b>FBTFT</b> drivers. You need to load it the first time
 	after boot before to use this library. This is accomplished issuing the fallowing command:
-</div>
+</p>
 <pre>sudo modprobe fbtft_device name=adafruit22a rotate=90</pre>
 <div>
 	where:

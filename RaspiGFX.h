@@ -24,8 +24,8 @@
 *  along with this program; if not, write to the Free Software
 *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
-#ifndef _RASPFB_H_
-#define _RASPFB_H_
+#ifndef _RASPIGFX_H_
+#define _RASPIGFX_H_
 
 #include <iostream>
 #include <unistd.h>
