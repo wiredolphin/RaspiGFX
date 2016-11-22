@@ -480,9 +480,9 @@ void RaspiGFX::fillCircle(uint16_t x0, uint16_t y0, uint16_t r, uint16_t clr) {
 *  in given color.
 */
 void RaspiGFX::drawBitmap(const uint8_t *bitmap, 
-                        int16_t x, int16_t y,
-                        int16_t w, int16_t h, 
-                        uint16_t clr) {
+                          int16_t x, int16_t y,
+                          int16_t w, int16_t h, 
+                          uint16_t clr) {
 
    int16_t i, j, byteWidth = (w + 7) / 8;
    uint8_t byte;
@@ -504,10 +504,10 @@ void RaspiGFX::drawBitmap(const uint8_t *bitmap,
 *  in given color and given background.
 */
 void RaspiGFX::drawBitmap(const uint8_t *bitmap, 
-                        int16_t x, int16_t y,
-                        int16_t w, int16_t h, 
-                        uint16_t clr, 
-                        uint16_t bg) {
+                          int16_t x, int16_t y,
+                          int16_t w, int16_t h, 
+                          uint16_t clr, 
+                          uint16_t bg) {
 
    int16_t i, j, byteWidth = (w + 7) / 8;
    uint8_t byte;
@@ -561,7 +561,7 @@ void RaspiGFX::setFont(const GFXfont *f) {
 }
 
 /* 
-*  Sets text size (works only with default font).
+*  Sets text size.
 */
 void RaspiGFX::setTextSize(uint8_t s) {
    textSize = (s > 0) ? s : 1;
@@ -601,10 +601,15 @@ void RaspiGFX::print(const char *str) {
 
 /* 
 *  Prints the given string, character after character.
-*  This version also modifies current text color 
-*  and text background color.
+*  This overloaded version also modifies current 
+*  text color and current text background color.
+*  It also sets the current cursor position.
 */
-void RaspiGFX::print(const char *str, int16_t x, int16_t y, uint16_t clr, uint16_t txtBgClr) {
+void RaspiGFX::print(const char *str, 
+                     int16_t x, 
+                     int16_t y, 
+                     uint16_t clr, 
+                     uint16_t txtBgClr) {
    setCursorPosition(x, y);
    setTextColor(clr, txtBgClr);
    while(*str) {
@@ -759,7 +764,7 @@ void RaspiGFX::drawChar(int16_t x, int16_t y,
 *  Credit to Adafruit_GFX library for this.
 *  (https://github.com/adafruit/Adafruit-GFX-Library).
 *
-*  NOTE: does currently not work correctly
+*  NOTE: currently this does not work correctly
 *  with built in font.
 */
 void RaspiGFX::getTextBounds(const char *str, 
