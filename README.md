@@ -3,8 +3,8 @@
 
 ![alt text](https://github.com/wiredolphin/wiredolphin.github.io/blob/master/wiki/img/RaspiGFX_logo_2.jpg "RaspiGFX")
 
-<br \>
-A graphic library for Raspberry Pi that allows to drive small TFT display modules through SPI.
+<br>
+<h2>A graphic library for Raspberry Pi that allows to drive small TFT display modules through SPI.</h2>
 
 <h3>Prerequisite</h3>
 <ul>
